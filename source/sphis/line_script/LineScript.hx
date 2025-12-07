@@ -9,11 +9,27 @@ class LineScript
 	{
 		this.file_name = file_name;
 		this.file_path = file_path;
-	}
 
-	public function parse() {}
+		load();
+	}
 
 	public function save() {}
 
-	public function load() {}
+	public function load()
+	{
+		save();
+	}
+
+	public var lines:Array<String> = [];
+
+	public function parse()
+	{
+		for (line in lines)
+			parseLine(line);
+	}
+
+	public function parseLine(line:String)
+	{
+		LineReader.read(line);
+	}
 }
