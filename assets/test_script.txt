@@ -1,1 +1,1 @@
-trace : "Hey!"
+trace : Hey!
