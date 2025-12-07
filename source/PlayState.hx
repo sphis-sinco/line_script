@@ -9,7 +9,7 @@ class PlayState extends FlxState
 	{
 		super.create();
 
-		new TextLineScript('test_script', 'assets/test_script.txt').parse();
+		new TextLineScript('assets/test_script.txt').parse();
 	}
 
 	override public function update(elapsed:Float)

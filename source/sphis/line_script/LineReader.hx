@@ -8,8 +8,17 @@ class LineReader
     {
         var split:Array<String> = line.split(' : ');
 
-        switch(split[0])
+        switch(split[0].toLowerCase())
         {
+            case 'trace':
+                split.remove(split[0]);
+                
+                var the_trace:String = '';
+                for (bit in split)
+                    the_trace += bit + ' ';
+
+                trace(script.file_path + ' : ' + the_trace, null);
+
             default:
                 Application.current.window.alert('ULB: ' + split[0], 'Unknown Line Bit');
         }

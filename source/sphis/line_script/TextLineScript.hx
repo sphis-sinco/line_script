@@ -4,9 +4,9 @@ import lime.utils.Assets;
 
 class TextLineScript extends LineScript
 {
-	override public function new(file_name:String, file_path:String)
+	override public function new(file_path:String)
 	{
-		super(file_name, file_path);
+		super(file_path);
 	}
 
 	override function load()
@@ -32,7 +32,7 @@ class TextLineScript extends LineScript
         var file_content:String = '';
         for (line in lines)
             file_content += line + '\n';
-        
+
 		sys.io.File.saveContent(file_path, file_content);
 		#else
 		trace('Cannot save');
