@@ -30,6 +30,6 @@ class LineScript
 
 	public function parseLine(line:String)
 	{
-		LineReader.read(line);
+		LineReader.read(line, this);
 	}
 }
